@@ -1,4 +1,4 @@
-# Импорт библиотек
+# Import libraries
 import threading
 import time
 import requests
@@ -7,17 +7,17 @@ import telebot
 
 from telebot import types
 
-# Настриваемые параметры
-BOT_TOKEN = "YOUR_TOKEN_BOT" # Токен ТГ бота (обязательно в кавычках)
-GROUP_CHAT_ID = -0000000000 # ID чата (обязательно БЕЗ кавычек)
-TOKEN_NAME = "TOKEN_NAME" # Название токена
-TOKEN_ADDRESS = "TOKEN_ADDRESS" # Адрес токена
-POOL_ID = "POOL_ID" # Адрес пула
+# Settings
+BOT_TOKEN = "YOUR_TOKEN_BOT" # TG bot token (must be in quotes)
+GROUP_CHAT_ID = -0000000000 # chat ID (WITHOUT quotation marks)
+TOKEN_NAME = "TOKEN_NAME" # Token name
+TOKEN_ADDRESS = "TOKEN_ADDRESS" # Token address
+POOL_ID = "POOL_ID" # Pool address
 BASE_URL = "https://api.geckoterminal.com/api/v2" # API URL
-IS_CHECKING = False # Если вкл., то транзакции объемом менее CHECKING_VALUE будут пропущены (True/False)
-CHECKING_VALUE = 10 # Величина для проверки объема транзакций 
-TIMEOUT = 10 # Частота запроса (секунд). ! Не ставить меньше 1 секунды !
-# Кнопки
+IS_CHECKING = False # If on, transactions less than CHECKING_VALUE will be skipped (True/False)
+CHECKING_VALUE = 10 # Value to check transaction volume 
+TIMEOUT = 10 # Request frequency (seconds). !!! Do not set less than 1 second !!!
+# Buttons
 markup = types.InlineKeyboardMarkup()
 button1 = types.InlineKeyboardButton("BUY $RRMONEY", url="https://example.com/buy")
 button2 = types.InlineKeyboardButton("OUR CHAT", url="https://example.com/chat")
@@ -32,7 +32,7 @@ TOKEN = f'[{TOKEN_NAME}](https://www.geckoterminal.com/ru/ton/pools/{POOL_ID})'
 HEADERS = {"Accept": "application/json;version=20230302"} 
 
 
-# Функция для форматирования чисел с запятыми
+# Function for formatting numbers with commas
 def format_number(number):
     return "{:,}".format(number)
 
