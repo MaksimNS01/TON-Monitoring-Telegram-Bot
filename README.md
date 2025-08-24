@@ -29,7 +29,7 @@ This Python script implements a Telegram bot that monitors token trades on the T
 
 Install the required libraries:
 ```bash
-pip install requests pyTelegramBotAPI
+pip install -r requirements.txt
 ```
 
 ## Configuration
